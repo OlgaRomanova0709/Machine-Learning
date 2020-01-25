@@ -29,9 +29,9 @@ Stages:
 ### Reporting
 
 * I applied 3 different models: 
-1. `Sequential` from Keras.models is **the best** (model.score=, model_loss=, model_accuracy=)
-2. `Support Vector Machine (SVM)` - SVC from sklearn.svm (model.score=), then I tune SVM model by `GridSearch` (model.score=), but this model remains not the best.
-3. I tried the `K-Nearest Neighbor Model (KNN)` KNeighborsClassifier from sklearn.neighbors, but found it the worst in this rank(model.score=)
+1. `Sequential` from Keras.models is **the best** ( model_loss=0.2712, model_accuracy=0.8802)
+2. `Support Vector Machine (SVM)` - SVC from sklearn.svm (modelSVC.score=0.84, modelSVC_accuracy=0.84), then I tune SVM model by `GridSearch` (model.score=0.8859,grid_accuracy=0.88), and this model becomes **the second best**.
+3. I tried the `K-Nearest Neighbor Model (KNN)` KNeighborsClassifier from sklearn.neighbors, but found it the worst in this list (modelKNN.score=0.8369, modelKNN_accuracy=0.82)
 
 
 ## Resources
