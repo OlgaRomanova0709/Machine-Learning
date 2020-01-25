@@ -6,35 +6,33 @@
 
 Over a period of nine years in deep space, the NASA Kepler space telescope has been out on a planet-hunting mission to discover hidden planets outside of our solar system.
 
-To help process this data, you will create machine learning models capable of classifying candidate exoplanets from the raw dataset.
+To help process this data, I created machine learning models capable of classifying candidate exoplanets from the raw dataset.
 
 Stages:
 
-1. [Preprocess the raw data](#Preprocessing)
+1. [Preprocess the raw data](#Preprocessing) 
 2. [Tune the models](#Tune-Model-Parameters)
-3. [Compare two or more models](#Evaluate-Model-Performance)
-
-- - -
-
-## Instructions
+3. [Compare several models](#Evaluate-Model-Performance)
 
 ### Preprocess the Data
 
-* Preprocess the dataset prior to fitting the model.
-* Perform feature selection and remove unnecessary features.
-* Use `MinMaxScaler` to scale the numerical data.
-* Separate the data into training and testing data.
+* Preprocessed the dataset prior to fitting the model.
+* Performed feature selection and remove unnecessary features.
+* Used `MinMaxScaler` to scale the numerical data.
+* Separated the data into **training** and **testing** data.
 
 ### Tune Model Parameters
 
-* Use `GridSearch` to tune model parameters.
-* Tune and compare at least two different classifiers.
+* Used `GridSearch` to tune model parameters.
+* Compared at least two different classifiers.
 
 ### Reporting
 
-* Create a README that reports a comparison of each model's performance as well as a summary about your findings and any assumptions you can make based on your model (is your model good enough to predict new exoplanets? Why or why not? What would make your model be better at predicting new exoplanets?).
+* I applied 3 different models: 
+1. `Sequential` from Keras.models is **the best** (model.score=, model_loss=, model_accuracy=)
+2. `Support Vector Machine (SVM)` - SVC from sklearn.svm (model.score=), then I tune SVM model by `GridSearch` (model.score=), but this model remains not the best.
+3. I tried the `K-Nearest Neighbor Model (KNN)` KNeighborsClassifier from sklearn.neighbors, but found it the worst in this rank(model.score=)
 
-- - -
 
 ## Resources
 
@@ -46,28 +44,3 @@ Stages:
 
 * [Grid Search](https://scikit-learn.org/stable/modules/grid_search.html)
 
-- - -
-
-## Hints and Considerations
-
-* Start by cleaning the data, removing unnecessary columns, and scaling the data.
-
-* Not all variables are significant be sure to remove any insignificant variables.
-
-* Make sure your `sklearn` package is up to date.
-
-* Try a simple model first, and then tune the model using `GridSearch`.
-
-- - -
-
-## Submission
-
-* Create a Jupyter Notebook for each model and host the notebooks on GitHub.
-
-* Create a file for your best model and push to GitHub
-
-* Include a README.md file that summarizes your assumptions and findings.
-
-* Submit the link to your GitHub project to Bootcamp Spot.
-
-##### © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
